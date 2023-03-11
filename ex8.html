@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="nhập vào tháng" name="value" id="input">
+    <input type="button" value="Tính số ngày" onclick="clickMe()"><br>
+    <p id="output"></p>
+    <script>
+
+        function clickMe() {
+            let soNgay;
+            let monthInput = document.getElementById('input').value;
+                switch (monthInput) {
+                case '1':
+                case '3':
+                case '5':
+                case '7':
+                case '8':
+                case '10':
+                case '12':  soNgay = 31;
+                    break;
+                case '4':
+                case '6':
+                case '9':
+                case '11': soNgay = 30;
+                    break;
+                case '2':
+                    soNgay = 28;
+                    break;
+                }
+            
+            
+        document.getElementById('output').innerHTML = 'Số ngày trong tháng là '+ soNgay;
+               
+        }
+    </script>
+</body>
+
+</html>
